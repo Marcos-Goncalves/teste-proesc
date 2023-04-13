@@ -35,6 +35,7 @@ class CategoryController extends Controller
             'slug'=> str_slug($request->name),
             'description'=>$request->description
         ]);
+        
         if($category){
             return redirect('categorias/listar');
         }

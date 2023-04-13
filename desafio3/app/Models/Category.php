@@ -14,4 +14,8 @@ class Category extends Model
     ];
     protected $table = 'categories';
 
+    public function product()
+    {
+        return $this->hasMany(Produto::class,'category_id','id');
+    }
 }
